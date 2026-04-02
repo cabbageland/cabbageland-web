@@ -9,216 +9,327 @@ type Landmark = {
   w: number
   h: number
   accent: string
+  district: string
+  mood: string
   description: string
   details: string[]
 }
 
 const landmarks: Landmark[] = [
   {
-    id: 'void',
-    name: 'Escape the Void',
-    sign: 'escape-the-void',
-    x: 11,
-    y: 39,
-    w: 16,
-    h: 16,
-    accent: 'var(--wood)',
+    id: 'reading-room',
+    name: 'Reading Room',
+    sign: 'reading room',
+    x: 10,
+    y: 32,
+    w: 18,
+    h: 18,
+    accent: '#d2c18c',
+    district: 'Northwest stacks',
+    mood: 'quiet lantern windows and laddered shelves',
     description:
-      'A newsstand-kiosk for dispatches, links, notes, and small portal-like experiments.',
+      'A library lodge cut into the upper ridge, where essays, links, and dispatches feel like rooms you can enter.',
     details: [
-      'Looks like a cozy field library, but it works like a launcher for essays, side quests, and weird little prototypes.',
-      'Good homepage pattern: each building is not just a card — it is a physical access point into a specific kind of work.',
-      'Could become a real content node for posts, project logs, and experiments.'
+      'This is the clearest clawlibrary signal in the scene: a structure with gravity, warmth, and a reason to explore.',
+      'Its perch above the valley makes it read as a knowledge district instead of a floating navigation card.',
+      'A good follow-on route is posts, notes, reading lists, experiments, and other browsable cabinets.'
     ]
   },
   {
-    id: 'compose',
-    name: 'Compose Boredom',
+    id: 'story-hut',
+    name: 'Music and Story Hut',
     sign: 'compose boredom',
-    x: 4,
-    y: 62,
-    w: 14,
-    h: 14,
-    accent: 'var(--gramophone)',
+    x: 11,
+    y: 67,
+    w: 18,
+    h: 16,
+    accent: '#e08d47',
+    district: 'Southwest creek bend',
+    mood: 'fireside audio, reeds, and gramophone glow',
     description:
-      'A music hut for sound, atmosphere, stories, and ambient artifacts from the world.',
+      'A tucked-away hut for songs, spoken fragments, ambient loops, and story objects that make the village feel inhabited.',
     details: [
-      'The gramophone corner gives the homepage a personality anchor — not just utility, but culture.',
-      'Could host soundtrack loops, spoken notes, or little story objects that make Cabbageland feel inhabited.',
-      'This is the anti-corporate section: delight as infrastructure.'
+      'Placing it in the lower creek bend makes it feel discovered rather than merely listed.',
+      'The warmer palette and circular roof silhouette separate it from the bookish and technical districts.',
+      'This zone can eventually hold soundtrack loops, voice notes, fiction snippets, and small narrative toys.'
     ]
   },
   {
-    id: 'farm',
-    name: "Nerd's Farm",
-    sign: "nerd's farm",
-    x: 63,
-    y: 45,
-    w: 16,
-    h: 15,
-    accent: 'var(--monitor)',
+    id: 'monument',
+    name: 'Central Cabbage Monument',
+    sign: 'cabbage core',
+    x: 39,
+    y: 30,
+    w: 23,
+    h: 24,
+    accent: '#98ff8e',
+    district: 'Valley heart',
+    mood: 'terraced stone, mist, and falling water',
     description:
-      'A research-lab landmark for experiments, code systems, datasets, and growing technical projects.',
+      'The identity anchor of Cabbageland: a ceremonial cabbage fountain where the whole map converges.',
     details: [
-      'This is the strongest “builders live here” signal in the scene.',
-      'The hydro-lab feeling maps nicely to engineering work: cultivation, instrumentation, iteration, strange crops.',
-      'Could naturally route to repos, technical notes, demos, and lab notebooks.'
+      'This is the scene spine. The river, paths, and sightlines should all make the monument feel central and inevitable.',
+      'A monument works better than a normal hero because it gives the homepage memory and orientation.',
+      'The water and glow imply life, ecology, and ongoing activity even when the page is still.'
+    ]
+  },
+  {
+    id: 'nerd-farm',
+    name: "Nerd's Farm and Lab",
+    sign: "nerd's farm",
+    x: 66,
+    y: 44,
+    w: 21,
+    h: 20,
+    accent: '#8dcde3',
+    district: 'Eastern glassworks',
+    mood: 'greenhouse domes, monitors, and cultivated prototypes',
+    description:
+      'A research quarter for code, systems, datasets, technical writeups, and strange cultivated projects.',
+    details: [
+      'This needs to feel infrastructural, not decorative: the place where things are measured, grown, and iterated on.',
+      'The greenhouse language ties engineering work to cultivation instead of generic dashboard aesthetics.',
+      'A natural extension is repos, experiments, dashboards, field notes, and lab notebooks.'
     ]
   },
   {
     id: 'gallery',
-    name: 'My World in XD',
-    sign: 'my-world-in-XD',
+    name: 'Gallery Ridge',
+    sign: 'my world in xd',
     x: 80,
-    y: 60,
-    w: 15,
-    h: 13,
-    accent: 'var(--gallery)',
+    y: 68,
+    w: 16,
+    h: 15,
+    accent: '#ffcf95',
+    district: 'Southeast overlook',
+    mood: 'framed windows, banners, and evening light',
     description:
-      'A gallery node for visual work, concept art, interfaces, and finished weirdness.',
+      'A ridge-top gallery for visual work, interfaces, concept art, worlds, and finished weirdness.',
     details: [
-      'Important because it keeps the homepage from becoming pure tech theming.',
-      'Makes room for art, worlds, mockups, and visual experiments as first-class citizens.',
-      'Could later support framed previews, rotating featured work, and enterable exhibits.'
-    ]
-  },
-  {
-    id: 'landmark',
-    name: 'Cabbage Waterfall',
-    sign: 'cabbage core',
-    x: 40,
-    y: 17,
-    w: 22,
-    h: 26,
-    accent: 'var(--cabbage-glow)',
-    description:
-      'The giant cabbage fountain at the center of the world: identity, ecology, and the whole vibe concentrated into one landmark.',
-    details: [
-      'This is the main orientation device. Everything radiates out from it.',
-      'As a homepage pattern, a central monument is better than a dead hero banner because it gives the world a memorable spine.',
-      'The waterfall also gives motion, sound imagination, and a sense that the place is alive.'
+      'Its raised overlook makes the district feel curated and public-facing rather than like another utility box.',
+      'This prevents the homepage from collapsing into pure tech theming by giving visual work equal spatial presence.',
+      'A later version could show rotating frames, exhibit posters, and preview windows from featured projects.'
     ]
   }
 ]
+
+const worldLayers = `
+  <div class="sky-glow"></div>
+  <div class="sun-disc"></div>
+  <div class="sun-halo"></div>
+  <div class="cloud-bank cloud-bank-a"></div>
+  <div class="cloud-bank cloud-bank-b"></div>
+  <div class="mountain-range mountain-back"></div>
+  <div class="mountain-range mountain-mid"></div>
+  <div class="forest-band forest-back"></div>
+  <div class="forest-band forest-mid"></div>
+  <div class="mist mist-a"></div>
+  <div class="mist mist-b"></div>
+  <div class="ridge ridge-left"></div>
+  <div class="ridge ridge-right"></div>
+  <div class="meadow meadow-top"></div>
+  <div class="meadow meadow-bottom"></div>
+  <div class="terrace terrace-left"></div>
+  <div class="terrace terrace-center"></div>
+  <div class="terrace terrace-right"></div>
+  <div class="bridge bridge-main"></div>
+  <div class="bridge bridge-lab"></div>
+  <div class="river river-spine"></div>
+  <div class="river river-fork-left"></div>
+  <div class="river river-fork-right"></div>
+  <div class="river-shine river-shine-a"></div>
+  <div class="river-shine river-shine-b"></div>
+  <div class="path path-reading"></div>
+  <div class="path path-story"></div>
+  <div class="path path-lab"></div>
+  <div class="path path-gallery"></div>
+  <div class="field field-lab"></div>
+  <div class="field field-gallery"></div>
+  <div class="cabbage-patch patch-lab"></div>
+  <div class="cabbage-patch patch-valley"></div>
+  <div class="reed-bed reed-bed-left"></div>
+  <div class="reed-bed reed-bed-right"></div>
+  <div class="lantern-post lantern-post-a"></div>
+  <div class="lantern-post lantern-post-b"></div>
+  <div class="lantern-post lantern-post-c"></div>
+  <div class="tree-cluster tree-cluster-left"></div>
+  <div class="tree-cluster tree-cluster-right"></div>
+  <div class="tree-cluster tree-cluster-front"></div>
+  <div class="bird bird-a"></div>
+  <div class="bird bird-b"></div>
+  <div class="bird bird-c"></div>
+`
+
+const landmarksMarkup = `
+  <div class="structure reading-room">
+    <div class="roof"></div>
+    <div class="body"></div>
+    <div class="window window-a"></div>
+    <div class="window window-b"></div>
+    <div class="window window-c"></div>
+    <div class="door"></div>
+    <div class="chimney"></div>
+    <div class="annex"></div>
+  </div>
+
+  <div class="structure story-hut">
+    <div class="roof"></div>
+    <div class="body"></div>
+    <div class="door"></div>
+    <div class="round-window"></div>
+    <div class="speaker-horn"></div>
+    <div class="porch"></div>
+  </div>
+
+  <div class="structure monument-structure">
+    <div class="plinth"></div>
+    <div class="cabbage"></div>
+    <div class="leaf leaf-left"></div>
+    <div class="leaf leaf-right"></div>
+    <div class="cascade cascade-left"></div>
+    <div class="cascade cascade-center"></div>
+    <div class="cascade cascade-right"></div>
+    <div class="pool"></div>
+    <div class="mist-ring"></div>
+  </div>
+
+  <div class="structure nerd-farm">
+    <div class="greenhouse greenhouse-main"></div>
+    <div class="greenhouse greenhouse-side"></div>
+    <div class="lab-tower"></div>
+    <div class="monitor-window monitor-a"></div>
+    <div class="monitor-window monitor-b"></div>
+    <div class="solar solar-a"></div>
+    <div class="solar solar-b"></div>
+  </div>
+
+  <div class="structure gallery-ridge">
+    <div class="roof"></div>
+    <div class="body"></div>
+    <div class="window window-a"></div>
+    <div class="window window-b"></div>
+    <div class="banner banner-a"></div>
+    <div class="banner banner-b"></div>
+    <div class="stairs"></div>
+  </div>
+`
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 
 app.innerHTML = `
   <div class="shell">
-    <header class="topbar panel pixel-frame">
-      <div class="stat-badge"><span class="coin"></span><strong>COINS:</strong> 1050</div>
-      <div class="brand">
-        <span class="brand-kicker">CABBAGELAND</span>
-        <h1>world homepage</h1>
+    <header class="topbar">
+      <div class="topbar-copy">
+        <div class="eyebrow">Cabbageland</div>
+        <h1>explorable village homepage</h1>
+        <p>
+          A clawlibrary-inspired valley where each landmark reads like a place with a purpose, not a card in a grid.
+        </p>
       </div>
-      <div class="stat-badge water"><span class="drop"></span><strong>WATER:</strong> 80%</div>
+
+      <div class="topbar-hud">
+        <div class="hud-pill">
+          <span class="hud-label">Season</span>
+          <strong>Sproutfall</strong>
+        </div>
+        <div class="hud-pill">
+          <span class="hud-label">Waterways</span>
+          <strong>Calibrated</strong>
+        </div>
+        <div class="hud-pill">
+          <span class="hud-label">Visitors</span>
+          <strong>Welcome</strong>
+        </div>
+      </div>
     </header>
 
-    <main class="world-wrap">
-      <section class="world panel pixel-frame" aria-label="Interactive Cabbageland world map">
-        <div class="sky"></div>
-        <div class="sun-arches arch-left"></div>
-        <div class="sun-arches arch-right"></div>
-        <div class="tree tree-left"></div>
-        <div class="tree tree-right"></div>
-        <div class="mountains"></div>
-        <div class="river river-main"></div>
-        <div class="river river-branch river-branch-a"></div>
-        <div class="river river-branch river-branch-b"></div>
-        <div class="footpath footpath-a"></div>
-        <div class="footpath footpath-b"></div>
-        <div class="field field-a"></div>
-        <div class="field field-b"></div>
-        <div class="field field-c"></div>
-        <div class="cabbage-patch patch-a"></div>
-        <div class="cabbage-patch patch-b"></div>
-        <div class="cabbage-patch patch-c"></div>
-        <div class="cabbage-patch patch-d"></div>
-        <div class="dome dome-left"></div>
-        <div class="dome dome-right"></div>
-        <div class="dome dome-right-small"></div>
-        <div class="bird bird-a"></div>
-        <div class="bird bird-b"></div>
-        <div class="bird bird-c"></div>
-        <div class="farmer" aria-hidden="true">
-          <div class="hat"></div>
-          <div class="head"></div>
-          <div class="body"></div>
-          <div class="arm arm-left"></div>
-          <div class="arm arm-right"></div>
-          <div class="leg leg-left"></div>
-          <div class="leg leg-right"></div>
-          <div class="bucket"></div>
+    <main class="world-frame" aria-label="Interactive Cabbageland world map">
+      <section class="world panel-frame">
+        ${worldLayers}
+        ${landmarksMarkup}
+
+        <div class="world-ui">
+          <div class="world-badge">
+            <span class="world-badge-label">Village atlas</span>
+            <strong>Cabbageland valley</strong>
+          </div>
+          <div class="world-legend">
+            <span><i class="legend-dot lore"></i> lore</span>
+            <span><i class="legend-dot sound"></i> sound</span>
+            <span><i class="legend-dot build"></i> build</span>
+            <span><i class="legend-dot art"></i> art</span>
+          </div>
         </div>
-        <div class="landmark-structure kiosk-building"></div>
-        <div class="landmark-structure auditorium-building"></div>
-        <div class="landmark-structure lab-building"></div>
-        <div class="landmark-structure gallery-building"></div>
-        <div class="landmark-structure cabbage-monument">
-          <div class="cabbage-head"></div>
-          <div class="waterfall waterfall-left"></div>
-          <div class="waterfall waterfall-mid"></div>
-          <div class="waterfall waterfall-right"></div>
-          <div class="basin"></div>
-        </div>
+
+        <aside class="dossier panel-frame" aria-live="polite">
+          <div class="dossier-kicker">Landmark dossier</div>
+          <h2 id="panel-title"></h2>
+          <p class="dossier-meta">
+            <span id="panel-district"></span>
+            <span class="meta-sep">/</span>
+            <span id="panel-mood"></span>
+          </p>
+          <p id="panel-description"></p>
+          <ul id="panel-details"></ul>
+          <div class="panel-footer">
+            <span class="status-led" aria-hidden="true"></span>
+            <span>Hover or tap a landmark to inspect the village.</span>
+          </div>
+        </aside>
 
         ${landmarks
           .map(
             (landmark) => `
-          <button
-            class="landmark ${landmark.id === 'landmark' ? 'monument-hotspot' : ''}"
-            data-landmark="${landmark.id}"
-            style="left:${landmark.x}%; top:${landmark.y}%; width:${landmark.w}%; height:${landmark.h}%; --accent:${landmark.accent};"
-            aria-label="Open ${landmark.name} details"
-          >
-            <span class="sign">${landmark.sign}</span>
-          </button>
-        `
+              <button
+                class="landmark"
+                data-landmark="${landmark.id}"
+                style="left:${landmark.x}%; top:${landmark.y}%; width:${landmark.w}%; height:${landmark.h}%; --accent:${landmark.accent};"
+                aria-label="Open ${landmark.name} details"
+              >
+                <span class="landmark-ring"></span>
+                <span class="sign">${landmark.sign}</span>
+                <span class="pulse"></span>
+              </button>
+            `
           )
           .join('')}
-
-        <div class="hud hud-day pixel-frame"><strong>DAY</strong><span>12</span></div>
       </section>
 
-      <aside class="info panel pixel-frame" aria-live="polite">
-        <div class="info-kicker">LANDMARK DOSSIER</div>
-        <h2 id="panel-title">Cabbage Waterfall</h2>
-        <p id="panel-description">Select a place in the world to inspect how the homepage is thinking about it.</p>
-        <ul id="panel-details"></ul>
-        <div class="panel-footer">
-          <span class="status-led"></span>
-          <span>clawlibrary-ish spatial homepage prototype for cabbageland</span>
-        </div>
-      </aside>
-    </main>
+      <section class="lower-grid">
+        <article class="info-card panel-frame">
+          <span class="card-kicker">Map logic</span>
+          <h3>Spatial hierarchy first</h3>
+          <p>
+            The monument now anchors the valley, districts sit on distinct elevations, and the river and bridges explain
+            how the world hangs together.
+          </p>
+        </article>
 
-    <section class="notes-grid">
-      <article class="note-card panel pixel-frame">
-        <h3>What this is</h3>
-        <p>
-          A browser homepage built as a tiny explorable world instead of a flat hero section. The layout borrows the
-          concept art's greenhouse arches, cabbage ecology, and little domain-buildings.
-        </p>
-      </article>
-      <article class="note-card panel pixel-frame">
-        <h3>Implementation style</h3>
-        <p>
-          Lightweight Vite + TypeScript + DOM/CSS composition. No external art pipeline yet — the scene is constructed
-          from stylized blocks, gradients, shadows, and chunky pixel framing so it ships fast but stays extensible.
-        </p>
-      </article>
-      <article class="note-card panel pixel-frame">
-        <h3>Next upgrades</h3>
-        <p>
-          Replace simplified landmarks with real sprite sheets, add camera panning / room transitions, and wire each
-          landmark to live project content or routes.
-        </p>
-      </article>
-    </section>
+        <article class="info-card panel-frame">
+          <span class="card-kicker">Interaction model</span>
+          <h3>Hotspots as wayfinding</h3>
+          <p>
+            Hotspots are treated like survey markers inside the scene, while the dossier behaves like a field notebook
+            pinned onto the map.
+          </p>
+        </article>
+
+        <article class="info-card panel-frame">
+          <span class="card-kicker">Future growth</span>
+          <h3>Ready for real destinations</h3>
+          <p>
+            Each district can map cleanly to routes, content collections, or richer room transitions without replacing
+            the current lightweight Vite and CSS approach.
+          </p>
+        </article>
+      </section>
+    </main>
   </div>
 `
 
 const title = document.querySelector<HTMLHeadingElement>('#panel-title')!
+const district = document.querySelector<HTMLSpanElement>('#panel-district')!
+const mood = document.querySelector<HTMLSpanElement>('#panel-mood')!
 const description = document.querySelector<HTMLParagraphElement>('#panel-description')!
 const details = document.querySelector<HTMLUListElement>('#panel-details')!
 const buttons = Array.from(document.querySelectorAll<HTMLButtonElement>('.landmark'))
@@ -228,6 +339,8 @@ function renderLandmark(id: string) {
   if (!landmark) return
 
   title.textContent = landmark.name
+  district.textContent = landmark.district
+  mood.textContent = landmark.mood
   description.textContent = landmark.description
   details.innerHTML = landmark.details.map((item) => `<li>${item}</li>`).join('')
 
@@ -247,4 +360,4 @@ buttons.forEach((button) => {
   button.addEventListener('click', () => renderLandmark(id))
 })
 
-renderLandmark('landmark')
+renderLandmark('monument')

@@ -1,6 +1,6 @@
 # Cabbageland Web
 
-A first-pass **Cabbageland homepage** built as a small interactive world instead of a flat landing page.
+A stronger **Cabbageland homepage** built as an explorable village valley instead of a flat landing page.
 
 It is inspired by the ClawLibrary spatial-interface idea and grounded in the uploaded Cabbageland concept art:
 - giant cabbage / waterfall landmark at center
@@ -15,11 +15,11 @@ It is inspired by the ClawLibrary spatial-interface idea and grounded in the upl
 This version is a lightweight browser experience built with **Vite + TypeScript**.
 
 Instead of using a heavy game stack immediately, the first implementation composes the scene with DOM + CSS:
-- pixel-ish framing
-- stylized landmark buildings
-- layered landscape elements
-- hover/click hotspots
-- a side dossier panel that updates per landmark
+- hand-built valley composition and terrain layers
+- district-specific landmark architecture
+- atmospheric mountains, waterways, bridges, and terraces
+- hover/click hotspots as in-world survey markers
+- an integrated dossier panel that updates per landmark
 
 That makes it fast to ship, easy to edit, and a decent foundation for later upgrades.
 
@@ -41,12 +41,12 @@ npm run preview
 
 ## Notes
 
-This is intentionally a **prototype-quality first product**, not final pixel art.
+This is intentionally a **lightweight authored prototype**, not a full game scene or sprite pipeline yet.
 
 What is real already:
-- the spatial homepage structure
-- landmark interaction model
-- visual language and palette derived from the concept art
+- the world-map homepage structure
+- landmark interaction and dossier model
+- stronger visual hierarchy, silhouette work, and atmospheric framing
 - architecture that can grow into a larger interactive world
 
 What I would likely do next:
